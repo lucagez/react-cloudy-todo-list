@@ -1,0 +1,111 @@
+:root {
+  --height: 730px;
+  --width: 411px; 
+  --font: 'Montserrat', sans-serif;
+  --black: #292929;
+  --red:#E56A77;
+  --white: #FFFFFF;
+}
+
+h1, p, button {
+  font-family: var(--font);
+  /* border: 1px solid red; */
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--black);
+  margin: 0;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 300;
+  color: rgba(66, 66, 66, 0.39);
+  margin: 5px;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #FFFFFF;
+}
+
+.card {
+  position: relative;
+  margin: auto;
+  height: var(--height);
+  width: var(--width);
+  /* border: 1px solid #292929; */
+  border-radius: 22px;
+  top: 10%;
+  z-index: 1;
+}
+
+.hot-air {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 40%;
+  animation: hot-air 5s ease-in-out 1s infinite;
+  /* z-index: ; */
+  /* visibility: hidden; */
+}
+
+.start {
+  /* border: 1px solid black; */
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 11.5%;
+  text-align: center;
+  z-index: 10;
+}
+
+.text {
+  margin-bottom: 50px;
+}
+
+.shadow {
+  box-shadow: 0px 50px 50px rgba(0, 0, 0, 0.15);
+}
+
+.gradient {
+  background: linear-gradient(209.22deg, #FFFFFF 4.25%, #F1F1F1 95.6%);
+}
+
+.add {
+  width: calc(var(--width) / 2.92);
+  height: 60px;
+  background: #FFFFFF;
+  border-radius: 100px;
+  position: relative;
+  margin: auto;
+}
+
+@keyframes hot-air {
+  0% {}
+  50% {top: 30%}
+  100% {}
+}
+
+@keyframes cloud {
+  from {left: -100px; visibility: visible}
+  to {left: 100vw; visibility: hidden}
+}
+
+.none {
+  display: none;
+}

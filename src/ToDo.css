@@ -1,0 +1,175 @@
+:root {
+    --main-border-radius: 12px;
+    --black: #292929;
+    --red:#E56A77;
+    --red-pressed: #B23946;
+    --white: #FFFFFF;
+    --font: 'Montserrat', sans-serif;
+}
+
+* {
+    /* border: 1px solid red;*/
+}
+
+/* button {
+    padding: 0px;
+    background-color: transparent;
+    font-family: var(--font);
+} */
+
+button:focus {
+    outline: 0 !important;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+}
+
+.todo {
+    padding-top: 40px; 
+    position: relative;
+}
+
+
+.task {
+    position: relative;
+    border-bottom: 1px solid rgba(66, 66, 66, 0.39);
+    margin: 5px 40px 5px 40px;
+    height: 100%;
+    color: var(--black);
+    min-height: 50px;
+    overflow-x: hidden;
+    transition: 
+                margin .2s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+                box-shadow .3s linear,
+                border-radius .25s linear;
+    font-family: var(--font);
+    font-size: 22px;
+    font-weight: 300;
+    color: rgba(66, 66, 66, 0.39);  
+    display: block;         
+}
+
+.task button {
+    padding: 0px;
+    background-color: transparent;
+    font-family: var(--font);
+}
+
+.task:hover {
+    border: 0px solid var(--black);
+    box-shadow: 0px 50px 50px rgba(0, 0, 0, 0.15);
+    margin: 5px 20px 5px 20px;
+    border-radius: var(--main-border-radius);
+    background-color: var(--black);
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.task:hover .left {
+    margin: 12px 0 12px 20px;
+    color: var(--white);
+}
+
+.content {
+    max-width: 70%;
+}
+
+.task:hover .right {
+    margin: 14px 20px 12px 20px;
+    color: var(--white);
+    display: inherit;
+}
+
+.task:hover .time {
+    display: none;
+}
+
+
+.form {
+    position: absolute;
+    margin: 20px;
+    left: 0px;
+    bottom: -300px;
+    color: var(--black);
+    transition: bottom .45s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    border-radius: var(--main-border-radius);
+}
+
+.appear {
+    bottom: 41px;
+}
+
+.input {
+    height: 50px;
+    width: 50%;
+    margin: 10px;
+    padding: 5px 0 5px 20px;
+    font-size: 20px;
+    font-weight: 300;
+    border: 0px solid var(--black);
+    border-radius: var(--main-border-radius);
+}
+
+.left {
+    float: left;
+    margin: 20px 0 0 0px;
+}
+
+.right {
+    float: right;
+    margin: 24px 0 0 0;
+    display: none;
+}
+
+.right:visited {
+    display: none;
+}
+
+.time {
+    padding: 0;
+    float: right;
+    margin: 20px 0 0 0;
+}
+
+.plusButton {
+    position: absolute;
+    right: 30px;
+    bottom: 65px;
+    height: 70px;
+    width: 70px;
+    background-color: var(--red);
+    border-radius: 50%;
+}
+
+.plusButton:active {
+    background-color: var(--red-pressed);
+}
+
+.plusIcon {
+    position: absolute;
+    width: 20px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+
+.appear {
+    animation-name: appear;
+    animation-duration: .5s;
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); 
+}
+
+@keyframes disappear {
+    0% {right: 0; border-radius: var(--main-border-radius); background-color: var(--black); border: 0;}
+    25% {background-color: var(--red); border-radius: var(--main-border-radius); color: var(--red); border: 0;}
+    100% {right: -150vw; background-color: var(--red); border-radius: var(--main-border-radius); color:var(--red); border: 0;}
+}
+
+@keyframes appear {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
