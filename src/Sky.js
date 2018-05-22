@@ -8,12 +8,12 @@ class Sky extends Component {
       }
     }
     Cloud = () => {
-      var random = Math.random();
+      // var random = Math.random();
       // var top = (Math.round((random + 0.00005) * 70)) + '%';
-      var top = Math.floor((random * (65) - 3)) + '%';
-      var dim = (Math.floor((random + 0.3) * 80)) + 'px';
-      var index = (Math.round(random * 2));
-      var velocity = Math.floor((random * 5) * 10) + 's';
+      var top = Math.floor((Math.random() * (65) - 3)) + '%';
+      var dim = (Math.floor((Math.random() + 0.3) * 80)) + 'px';
+      var index = (Math.round(Math.random() * 2));
+      var velocity = Math.floor((Math.random() * 5) * 10) + 's';
       console.log(top, dim, index, velocity);
       var cloudStyle = {
         top: top,

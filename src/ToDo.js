@@ -3,7 +3,7 @@ import './ToDo.css';
 
 const init = [
     {
-        value: 'wtf',
+        value: 'value',
         style: {
             
         }
@@ -28,7 +28,6 @@ class ToDo extends Component {
         this.setState({
             todo: {
                 value: text.target.value,
-                time: this.state.time
             },
             value: text.target.value
         });

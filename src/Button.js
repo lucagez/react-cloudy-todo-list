@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
 
-// const StartButton = () => {
-//     return (
-//         <button className="add shadow">Add</button>
-//     )
-// }
 
 class Button extends Component {
   render() {
@@ -28,32 +23,3 @@ class Button extends Component {
 }
 
 export default Button;
-
-// const StartText = () => {
-//   return (
-//       <div className="text">
-//         <h1>Your day’s still empty...</h1>
-//         <p>Put in some tasks and make your day!</p>
-//       </div>
-//   )
-// }
-
-// export default StartButton;
-
-
-
-
-
-// const StartText = () => {
-//   return (
-//       <div className="start">
-//       <div className="text">
-//         <h1>Your day’s still empty...</h1>
-//         <p>Put in some tasks and make your day!</p>
-//       </div>
-//       <button className="add shadow">Add</button>
-//     </div>
-//   )
-// }
-
-// export default StartButton;

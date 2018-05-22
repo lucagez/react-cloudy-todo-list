@@ -17,12 +17,6 @@ class Card extends Component {
     }
     render() {
         const { data } = this.state;
-        // const startVisibility = {
-        //     display: data.start,
-        // }
-        // const tasksVisibility = {
-        //     display: data.tasks,
-        // }
         return (<div className="card shadow gradient" >
                     <div className={data ? '' : 'none'}>
                         <HotAir />
